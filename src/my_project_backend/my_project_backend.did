@@ -1,11 +1,11 @@
 type Blog = record {
     title: text;
-    date: nat32;
+    date: nat64;
     content: text;
     tags: vec text;
 }
 
 service : {
-    "add_blog": (text) -> ();
-    "get_blogs": () -> (vec text) query;
+    "add_blog": (text, text, vec text) -> ();
+    "get_blogs": () -> (vec Blog) query;
 }
