@@ -7,7 +7,7 @@ thread_local! {
 }
 
 #[ic_cdk::update]
-fn add_blog(title: String, content: String, tags: Vec<String>) -> Result<(), String> {
+fn add_blog(title: String, content: String, tags: Vec<String>) -> Result<String, String> {
     if title.len() > 250 {
         return Err("Title is too long".to_string());
     }
