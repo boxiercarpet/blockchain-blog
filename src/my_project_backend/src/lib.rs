@@ -17,7 +17,7 @@ fn add_blog(title: String, content: String, tags: Vec<String>) -> Result<(), Str
         blogs.borrow_mut().push(blog);
     });
 
-    Ok(())
+    Ok("Blog added".to_string())
 }
 
 #[ic_cdk::query]
